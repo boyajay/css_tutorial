@@ -28,6 +28,7 @@ body {
 ul {
   padding: 0;
   list-style: none;
+  margin: 0;
 }
 
 p {
@@ -73,6 +74,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/display
  }
 
   /* Style header link buttons */
+.header {
+  padding-top: .1em;
+  padding-bottom: .1em;
+}
+
 .header a {
   background: #FFF;
   border-radius: .5rem;
@@ -118,17 +124,37 @@ medium screen -- this media query affects viewports
 with a width of 769 pixels or more
 */
 @media (min-width: 769px) {
+
+  .home {
+    size: 20%;
+    float: left;
+    padding-left: 10%;
+  }
+
   .container {
   /* margin: 0 auto is shorthand for top and bottom margins of 0
      and left and right margins set automatically, which centers
      the context horizontally. */
     margin: 0 auto;
-    width: 90%;
+    width: 80%;
     /* We don't want the layout container to get any larger
     than 1000px on larger screens */
     max-width: 1000px;
+  
   }
 
+  .col {
+    float: left;
+  }
+
+  .nav li {
+    margin-right: 1%;
+    display: inline-block;
+  }
+
+  .primary, .secondary {
+    width: 50%;
+  }
   /* This class fixes the footer to the bottom of the viewport,
   no matter how little content there is on the page. */
   .footerfix {
@@ -160,3 +186,14 @@ with a width of 1025 pixels or more
  */
 
  /* YOUR CODE HERE */
+/*@media (min-width: 1000px) {
+  .container {*/
+  /* margin: 0 auto is shorthand for top and bottom margins of 0
+     and left and right margins set automatically, which centers
+     the context horizontally. */
+    /*margin: 0 auto;
+    width: 90%;*/
+    /* We don't want the layout container to get any larger
+    than 1000px on larger screens */
+  /*}
+}*/
